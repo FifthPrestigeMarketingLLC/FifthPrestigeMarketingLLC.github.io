@@ -533,45 +533,50 @@
     </main>
 
     <div class="quote-modal" id="quoteModal">
-        <div class="quote-modal-content">
-            <span class="close-modal" id="closeModal">×</span>
-            <h3>Request a Quote</h3>
-            <form id="quoteForm" action="https://formspree.io/f/xjkyarww" method="POST">
-                <label>Select Services:</label>
-                <div>
-                    <label for="seo">SEO Optimization</label>
-                    <input type="checkbox" id="seo" name="services[]" value="SEO Optimization">
-                </div>
-                <div>
-                    <label for="website">Website Development</label>
-                    <input type="checkbox" id="website" name="services[]" value="Website Development">
-                </div>
-                <div>
-                    <label for="social">Social Media Management</label>
-                    <input type="checkbox" id="social" name="services[]" value="Social Media Management">
-                </div>
-                <div>
-                    <label for="logo">Logo Design</label>
-                    <input type="checkbox" id="logo" name="services[]" value="Logo Design">
-                </div>
-                <div>
-                    <label for="cards">Business Cards</label>
-                    <input type="checkbox" id="cards" name="services[]" value="Business Cards">
-                </div>
-                <div>
-                    <label for="pr">PR Campaigns</label>
-                    <input type="checkbox" id="pr" name="services[]" value="PR Campaigns">
-                </div>
-                <div>
-                    <label for="bill-consulting">Bill Consulting</label>
-                    <input type="checkbox" id="bill-consulting" name="services[]" value="Bill Consulting">
-                </div>
-                <label for="contactInfo">Contact Information (Email or Phone Number):</label>
-                <input type="text" id="contactInfo" name="contactInfo" placeholder="e.g., your@email.com or (123) 456-7890" required>
-                <button type="submit">Submit</button>
-            </form>
+    <div class="quote-modal-content">
+        <span class="close-modal" id="closeModal">×</span>
+        <h3>Request a Quote</h3>
+        <form id="quoteForm" action="https://formspree.io/f/xjkyarww" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="e.g., John Doe" required>
+            <label for="contactInfo">Contact Information (Email or Phone Number):</label>
+            <input type="text" id="contactInfo" name="contactInfo" placeholder="e.g., your@email.com or (123) 456-7890" required>
+            <label>Select Services:</label>
+            <div>
+                <label for="seo">SEO Optimization</label>
+                <input type="checkbox" id="seo" name="services[]" value="SEO Optimization">
+            </div>
+            <div>
+                <label for="website">Website Development</label>
+                <input type="checkbox" id="website" name="services[]" value="Website Development">
+            </div>
+            <div>
+                <label for="social">Social Media Management</label>
+                <input type="checkbox" id="social" name="services[]" value="Social Media Management">
+            </div>
+            <div>
+                <label for="logo">Logo Design</label>
+                <input type="checkbox" id="logo" name="services[]" value="Logo Design">
+            </div>
+            <div>
+                <label for="cards">Business Cards</label>
+                <input type="checkbox" id="cards" name="services[]" value="Business Cards">
+            </div>
+            <div>
+                <label for="pr">PR Campaigns</label>
+                <input type="checkbox" id="pr" name="services[]" value="PR Campaigns">
+            </div>
+            <div>
+                <label for="bill-consulting">Bill Consulting</label>
+                <input type="checkbox" id="bill-consulting" name="services[]" value="Bill Consulting">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="thankYouMessage" style="display: none; text-align: center; margin-top: 10px;">
+            <p>Thank you! We’ll be in touch shortly.</p>
         </div>
     </div>
+</div>
 
     <footer>
         <p>© 2025 Fifth Prestige Marketing LLC. All rights reserved.</p>
@@ -590,109 +595,117 @@
     </footer>
 
     <script>
-        // Toggle dropdown on click
-        const menuBtn = document.getElementById('menuBtn');
-        const dropdownMenu = document.getElementById('dropdownMenu');
+    // Toggle dropdown on click
+    const menuBtn = document.getElementById('menuBtn');
+    const dropdownMenu = document.getElementById('dropdownMenu');
 
-        menuBtn.addEventListener('click', function() {
-            dropdownMenu.classList.toggle('show');
-        });
+    menuBtn.addEventListener('click', function() {
+        dropdownMenu.classList.toggle('show');
+    });
 
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
-                dropdownMenu.classList.remove('show');
-            }
-        });
-
-	document.querySelector('.logo-link').addEventListener('click', function(e) {
-           e.preventDefault();
-           window.scrollTo({
-           top: 0,
-           behavior: 'smooth'
-   	    });
-	});
-
-        // Smooth scroll to section with offset
-        document.querySelectorAll('.dropdown-content a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                dropdownMenu.classList.remove('show');
-            });
-        });
-
-        // Fade-in animation for sections
-        function checkVisibility() {
-            const sections = document.querySelectorAll('section');
-            const triggerBottom = window.innerHeight * 0.8;
-
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-
-                if (sectionTop < triggerBottom) {
-                    section.classList.add('visible');
-                }
-            });
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove('show');
         }
+    });
 
-        window.addEventListener('scroll', checkVisibility);
-        window.addEventListener('load', checkVisibility);
-
-        // Get Quote Modal functionality
-        const getQuoteBtn = document.getElementById('getQuoteBtn');
-        const getQuoteBtnContact = document.getElementById('getQuoteBtnContact');
-        const quoteModal = document.getElementById('quoteModal');
-        const closeModal = document.getElementById('closeModal');
-        const quoteForm = document.getElementById('quoteForm');
-
-        getQuoteBtn.addEventListener('click', function() {
-            quoteModal.style.display = 'flex';
+    document.querySelector('.logo-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
+    });
 
-        getQuoteBtnContact.addEventListener('click', function() {
-            quoteModal.style.display = 'flex';
+    // Smooth scroll to section with offset
+    document.querySelectorAll('.dropdown-content a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+            dropdownMenu.classList.remove('show');
         });
+    });
 
-        closeModal.addEventListener('click', function() {
-            quoteModal.style.display = 'none';
-        });
+    // Fade-in animation for sections
+    function checkVisibility() {
+        const sections = document.querySelectorAll('section');
+        const triggerBottom = window.innerHeight * 0.8;
 
-        quoteModal.addEventListener('click', function(event) {
-            if (event.target === quoteModal) {
-                quoteModal.style.display = 'none';
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+
+            if (sectionTop < triggerBottom) {
+                section.classList.add('visible');
             }
         });
+    }
 
-        quoteForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const formData = new FormData(quoteForm);
-            fetch(quoteForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    alert('Thank you! Your quote request has been submitted.');
-                    quoteModal.style.display = 'none';
-                    quoteForm.reset();
-                } else {
-                    alert('There was an error submitting your request. Please try again.');
-                }
-            }).catch(error => {
-                alert('There was an error: ' + error.message);
-            });
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('load', checkVisibility);
+
+    // Get Quote Modal functionality
+    const getQuoteBtn = document.getElementById('getQuoteBtn');
+    const getQuoteBtnContact = document.getElementById('getQuoteBtnContact');
+    const quoteModal = document.getElementById('quoteModal');
+    const closeModal = document.getElementById('closeModal');
+    const quoteForm = document.getElementById('quoteForm');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+
+    getQuoteBtn.addEventListener('click', function() {
+        quoteModal.style.display = 'flex';
+        thankYouMessage.style.display = 'none'; // Hide thank-you on open
+    });
+
+    getQuoteBtnContact.addEventListener('click', function() {
+        quoteModal.style.display = 'flex';
+        thankYouMessage.style.display = 'none'; // Hide thank-you on open
+    });
+
+    closeModal.addEventListener('click', function() {
+        quoteModal.style.display = 'none';
+    });
+
+    quoteModal.addEventListener('click', function(event) {
+        if (event.target === quoteModal) {
+            quoteModal.style.display = 'none';
+        }
+    });
+
+    quoteForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const formData = new FormData(quoteForm);
+        fetch(quoteForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                quoteForm.style.display = 'none'; // Hide form
+                thankYouMessage.style.display = 'block'; // Show thank-you
+                setTimeout(() => {
+                    quoteModal.style.display = 'none'; // Close modal after 2 seconds
+                    quoteForm.style.display = 'block'; // Reset form visibility
+                    thankYouMessage.style.display = 'none'; // Hide thank-you
+                    quoteForm.reset(); // Clear form
+                }, 2000);
+            } else {
+                alert('There was an error submitting your request. Please try again.');
+            }
+        }).catch(error => {
+            alert('There was an error: ' + error.message);
         });
-    </script>
+    });
+</script>
 </body>
 </html>
