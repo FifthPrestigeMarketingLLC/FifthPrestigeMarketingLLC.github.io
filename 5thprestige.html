@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Basic Security Meta Tags -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <!-- SEO Meta Tags -->
+    <title>Fifth Prestige Marketing - Digital Marketing Solutions</title>
+    <meta name="description" content="Fifth Prestige Marketing offers SEO, website development, and social media management to help small businesses thrive in Chicagoland and beyond.">
+    <meta name="keywords" content="digital marketing, SEO, website development, social media, small business, Chicagoland">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google Tag Manager (Head) -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    <!-- Replace GTM-XXXXXXX with your GTM ID -->
+
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        header {
+            background-color: #000000;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .header-title {
+    	    margin-right: auto;
+	}
+
+	.logo {
+            max-height: 130px; /* Adjust this value based on your logo size */
+            width: auto;
+            display: block;
+	}
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: transparent;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: 2px solid #ffffff;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .dropbtn:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1a1a1a;
+            min-width: 160px;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+            margin-top: 8px;
+            z-index: 1001;
+            right: 0;
+        }
+
+        .dropdown-content.show {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #ffffff;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #333333;
+            padding-left: 20px;
+        }
+
+        .content {
+            padding: 100px 15px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: #ffffff;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        p {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 100%;
+            margin: 0 auto 10px;
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 100%;
+            margin: 15px auto;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 100%;
+            margin: 15px auto;
+        }
+
+        .service-item {
+            flex: 1 1 100%;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 10px;
+            display: block;
+        }
+
+        .service-item p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .get-quote-btn {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        .get-quote-btn:hover {
+            background-color: #cccccc;
+        }
+
+        .quote-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1002;
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
+        }
+
+        .quote-modal-content {
+            background-color: #1a1a1a;
+            padding: 15px;
+            border-radius: 8px;
+            max-width: 90%;
+            width: 100%;
+            text-align: left;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .quote-modal-content h3 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .quote-modal-content label {
+            display: block;
+            margin: 8px 0 4px;
+            font-size: 0.9rem;
+        }
+
+        .quote-modal-content input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .quote-modal-content input[type="text"],
+        .quote-modal-content input[type="tel"] {
+            width: 100%;
+            padding: 6px;
+            margin-bottom: 10px;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            background-color: #333333;
+            color: #ffffff;
+            font-size: 0.9rem;
+            box-sizing: border-box;
+        }
+
+        .quote-modal-content button {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .quote-modal-content button:hover {
+            background-color: #cccccc;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #ffffff;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 100%;
+            margin: 0 auto 10px;
+        }
+
+        li {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 1.5rem;
+            border-top: 1px solid #333333;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        .social-icons svg {
+            width: 24px;
+            height: 24px;
+            fill: #ffffff;
+        }
+
+        .about-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+        }
+
+        .who-we-serve-images-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+
+        .who-we-serve-team-image {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+            object-fit: cover;
+        }
+
+        .who-we-serve-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 10px;
+            }
+            h1 {
+                font-size: 1.2rem;
+            }
+            .dropbtn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+            .content {
+                padding: 80px 10px 20px;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .service-item {
+                flex: 1 1 100%;
+            }
+            .service-icon {
+                width: 50px;
+                height: 50px;
+            }
+            .get-quote-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+            .quote-modal-content {
+                padding: 10px;
+            }
+            .quote-modal-content h3 {
+                font-size: 1.2rem;
+            }
+            .welcome-text {
+                padding: 0 10px;
+            }
+            .about-image {
+                max-width: 90%;
+                margin: 15px auto;
+            }
+            .who-we-serve-team-image {
+                width: 150px;
+            }
+            .who-we-serve-images-container {
+                gap: 15px;
+                justify-content: center;
+            }
+            .who-we-serve-image {
+                max-width: 90%;
+                margin: 15px auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .who-we-serve-team-image {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Replace GTM-XXXXXXX with your GTM ID -->
+
+    <header>
+    <div class="header-content">
+        <div class="header-title">
+            <a href="#" class="logo-link">
+                <img src="FPMLOGOTP.png" alt="Fifth Prestige Marketing Logo" class="logo">
+            </a>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" id="menuBtn">Menu</button>
+            <div class="dropdown-content" id="dropdownMenu">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#who-we-serve">Who We Serve</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <main class="content">
+        <section id="home">
+            <div class="video-container">
+                <video autoplay loop muted playsinline>
+                    <source src="Fifth Prestige Marketing.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Services</h2>
+            <p>We provide a wide range of marketing solutions to help your business thrive:</p>
+            <div class="services-list">
+                <div class="service-item">
+                    <img src="seo.png" alt="SEO Icon" class="service-icon">
+                    <p>SEO Optimization - Boost your online visibility and search engine rankings</p>
+                </div>
+                <div class="service-item">
+                    <img src="click.png" alt="Website Icon" class="service-icon">
+                    <p>Website Development - Create modern, user-friendly websites tailored to your brand</p>
+                </div>
+                <div class="service-item">
+                    <img src="advertising.png" alt="Social Media Icon" class="service-icon">
+                    <p>Social Media Management - Grow your audience and engagement across platforms</p>
+                </div>
+                <div class="service-item">
+                    <img src="paintbrush.png" alt="Logo Icon" class="service-icon">
+                    <p>Logo Design - Craft unique, memorable logos that represent your business</p>
+                </div>
+                <div class="service-item">
+                    <img src="business-cards.png" alt="Business Card Icon" class="service-icon">
+                    <p>Business Cards - Design professional, eye-catching cards for networking</p>
+                </div>
+                <div class="service-item">
+                    <img src="public-relation.png" alt="PR Icon" class="service-icon">
+                    <p>PR Campaigns - Build your brand's reputation with strategic public relations</p>
+                </div>
+                <div class="service-item">
+                    <img src="money-saving.png" alt="Bill Consulting Icon" class="service-icon">
+                    <p>Bill Consulting - Optimize your billing processes for efficiency and profitability</p>
+                </div>
+            </div>
+            <button class="get-quote-btn" id="getQuoteBtn">Get Quote</button>
+        </section>
+
+        <section id="who-we-serve">
+            <h2>Who We Serve</h2>
+            <p>We’re all about <strong>supercharging small businesses</strong>—giving them the tools to shine bright and dominate their markets! Our clients are the heartbeat of local communities, including:</p>
+            <ul>
+                <li>Restaurants</li>
+                <li>Clothing Stores</li>
+                <li>Mom & Pop Shops</li>
+                <li>Rental Services</li>
+                <li>and Other Small Enterprises</li>
+            </ul>
+            <p>Rooted in the heart of Illinois, we’re on a mission to turbocharge businesses across the <strong>Chicagoland area and beyond</strong>. We craft marketing magic that clicks with your neighborhood, turning local love into big wins!</p>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We’re a squad of marketing dynamos, fired up to catapult your business to the top of today’s wild, competitive jungle! Armed with bold ideas and razor-sharp strategies, we make results happen—fast.</p>
+            <p>Born from a burning desire to lift up small businesses, Fifth Prestige Marketing is your go-to crew with deep roots in the Chicagoland scene. We don’t just meet expectations—we blow them out of the water with custom solutions that scream “you.” From skyrocketing your online game to designing a brand that turns heads, or even sorting out your billing chaos—we’ve got your back every thrilling step of the way.</p>
+            <img src="AboutUs5PM.jpg" alt="Fifth Prestige Marketing Team" class="about-image">
+            <p>At Fifth Prestige Marketing, we harness the power of the 5 Ps of marketing—product, price, place, promotion, and people—to drive business success. We craft compelling strategies that ensure your product or service stands out, set competitive pricing to maximize value, and identify the best places to connect with your target audience. Our tailored promotion strategies amplify brand awareness, while our focus on people ensures meaningful engagement that fosters long-term customer relationships. By integrating these five essential elements, we create a marketing blueprint that positions your business for sustainable growth.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Ready to kick things off? Reach out and let’s get to it!:</p>
+            <p>Email: fifthprestigemarketing@gmail.com</p>
+            <p>Phone: (872) 216-6474</p>
+            <button class="get-quote-btn" id="getQuoteBtnContact">Get Quote</button>
+        </section>
+    </main>
+
+    <div class="quote-modal" id="quoteModal">
+        <div class="quote-modal-content">
+            <span class="close-modal" id="closeModal">×</span>
+            <h3>Request a Quote</h3>
+            <form id="quoteForm" action="https://formspree.io/f/xjkyarww" method="POST">
+                <label>Select Services:</label>
+                <div>
+                    <label for="seo">SEO Optimization</label>
+                    <input type="checkbox" id="seo" name="services[]" value="SEO Optimization">
+                </div>
+                <div>
+                    <label for="website">Website Development</label>
+                    <input type="checkbox" id="website" name="services[]" value="Website Development">
+                </div>
+                <div>
+                    <label for="social">Social Media Management</label>
+                    <input type="checkbox" id="social" name="services[]" value="Social Media Management">
+                </div>
+                <div>
+                    <label for="logo">Logo Design</label>
+                    <input type="checkbox" id="logo" name="services[]" value="Logo Design">
+                </div>
+                <div>
+                    <label for="cards">Business Cards</label>
+                    <input type="checkbox" id="cards" name="services[]" value="Business Cards">
+                </div>
+                <div>
+                    <label for="pr">PR Campaigns</label>
+                    <input type="checkbox" id="pr" name="services[]" value="PR Campaigns">
+                </div>
+                <div>
+                    <label for="bill-consulting">Bill Consulting</label>
+                    <input type="checkbox" id="bill-consulting" name="services[]" value="Bill Consulting">
+                </div>
+                <label for="contactInfo">Contact Information (Email or Phone Number):</label>
+                <input type="text" id="contactInfo" name="contactInfo" placeholder="e.g., your@email.com or (123) 456-7890" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Fifth Prestige Marketing LLC. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/fifthprestigemarketing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24">
+                    <path d="M7.75 2h8.5A5.25 5.25 0 0121.5 7.25v8.5A5.25 5.25 0 0116.25 21h-8.5A5.25 5.25 0 012.5 15.75v-8.5A5.25 5.25 0 017.75 2zm6.5 1.5h-4.5a3 3 0 00-3 3v4.5a3 3 0 003 3h4.5a3 3 0 003-3v-4.5a3 3 0 00-3-3zm-1.25 7.75a3 3 0 11-3-3 3 3 0 013 3zm3.25-6.5a1 1 0 11-1-1 1 1 0 011 1z"/>
+                </svg>
+            </a>
+            <a href="https://x.com/5thPrestigeLLC" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <svg viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle dropdown on click
+        const menuBtn = document.getElementById('menuBtn');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        menuBtn.addEventListener('click', function() {
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!menuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+
+	document.querySelector('.logo-link').addEventListener('click', function(e) {
+           e.preventDefault();
+           window.scrollTo({
+           top: 0,
+           behavior: 'smooth'
+   	    });
+	});
+
+        // Smooth scroll to section with offset
+        document.querySelectorAll('.dropdown-content a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+                dropdownMenu.classList.remove('show');
+            });
+        });
+
+        // Fade-in animation for sections
+        function checkVisibility() {
+            const sections = document.querySelectorAll('section');
+            const triggerBottom = window.innerHeight * 0.8;
+
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+
+        // Get Quote Modal functionality
+        const getQuoteBtn = document.getElementById('getQuoteBtn');
+        const getQuoteBtnContact = document.getElementById('getQuoteBtnContact');
+        const quoteModal = document.getElementById('quoteModal');
+        const closeModal = document.getElementById('closeModal');
+        const quoteForm = document.getElementById('quoteForm');
+
+        getQuoteBtn.addEventListener('click', function() {
+            quoteModal.style.display = 'flex';
+        });
+
+        getQuoteBtnContact.addEventListener('click', function() {
+            quoteModal.style.display = 'flex';
+        });
+
+        closeModal.addEventListener('click', function() {
+            quoteModal.style.display = 'none';
+        });
+
+        quoteModal.addEventListener('click', function(event) {
+            if (event.target === quoteModal) {
+                quoteModal.style.display = 'none';
+            }
+        });
+
+        quoteForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(quoteForm);
+            fetch(quoteForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    alert('Thank you! Your quote request has been submitted.');
+                    quoteModal.style.display = 'none';
+                    quoteForm.reset();
+                } else {
+                    alert('There was an error submitting your request. Please try again.');
+                }
+            }).catch(error => {
+                alert('There was an error: ' + error.message);
+            });
+        });
+    </script>
+</body>
+</html>
